@@ -28,7 +28,7 @@ function App() {
               </div>
 
               <Routes>
-                <Route path='/' element={<MaisVotadas />}></Route>
+                <Route path='/rseries' element={<MaisVotadas />}></Route>
                 <Route path='/maisvotadas' element={<MaisVotadas />}></Route>
                 <Route path='/populares' element={<Populares />}></Route>
                 <Route path='/lancamentos' element={<Lancamentos />}></Route>
