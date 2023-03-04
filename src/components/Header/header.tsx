@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 function Header() {
   return (
     <HeaderContainer>
-      <NavLink className="logo" to="./">RSéries</NavLink>
+      <NavLink className="logo" to="./rseries">RSéries</NavLink>
       <SearchBar />
     </HeaderContainer>
   )
