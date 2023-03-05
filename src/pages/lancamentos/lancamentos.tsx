@@ -24,7 +24,7 @@ interface Serie {
 function Lancamentos() {
 
   const [series, setSeries] = useState<Serie[]>([]);
-  const apiUrl = `https://api.themoviedb.org/3/tv/airing_today?api_key=333914a628335e6d7a0b80947aa0acf6&language=pt-BR&page=3`
+  const apiUrl = `https://api.themoviedb.org/3/tv/airing_today?api_key=333914a628335e6d7a0b80947aa0acf6&language=pt-BR&page=1`
 
   useEffect(() => {
     async function load() {
