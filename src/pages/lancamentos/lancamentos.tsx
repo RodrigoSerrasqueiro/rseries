@@ -24,19 +24,23 @@ interface Serie {
 function Lancamentos() {
 
   const [series, setSeries] = useState<Serie[]>([]);
-  const apiUrl = `https://api.themoviedb.org/3/tv/airing_today?api_key=333914a628335e6d7a0b80947aa0acf6&language=pt-BR&page=1`
+  const apiUrl = `https://api.themoviedb.org/3/tv/airing_today?api_key=333914a628335e6d7a0b80947aa0acf6&language=pt-BR&page=2`
 
   useEffect(() => {
-    async function load() {
-      try {
-        const resposta = await axios.get(apiUrl);
-        setSeries(resposta.data.results)
-      } catch (erro) {
-        console.log(erro);
-      }
+    load()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []) 
+
+  async function load() {
+    try {
+      const resposta = await axios.get(apiUrl);
+      setSeries(resposta.data.results)
+    } 
+    catch (erro) {
+      console.log(erro);
     }
-    load();
-  }, [series]);
+  }
+ 
 
   return (
     <LancamentosContainer>
