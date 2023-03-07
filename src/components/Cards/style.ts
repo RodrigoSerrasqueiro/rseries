@@ -1,5 +1,6 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import { backgroundItemColor, destakColor, fontsColor} from "../colors/colors";
+import { backgroundItemColor, destakColor, fontsColor, primaryColor} from "../colors/colors";
 
 interface Props {
   active: boolean
@@ -45,6 +46,20 @@ export const CardDetail = styled.div`
   padding: 5px 15px;
   height: 150px;
 `
+export const DetailsLink = styled(NavLink)`
+  background-color: ${primaryColor};
+  text-decoration: none;
+  color: ${fontsColor};
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  column-gap: 15px;
+  margin: 10px;
+`
+
 export const Nota = styled.div`
   display: flex;
   align-items: center;

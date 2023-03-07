@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { backgroundItemColor, fontsColor } from "../colors/colors"; 
 
@@ -15,10 +16,10 @@ export const HeaderContainer = styled.header`
     padding: 0 5px;
   }
 `
-export const Logo = styled.a`
+export const Logo = styled(NavLink)`
   cursor: pointer;
   font-size: 25px;
   font-weight: bold;
   text-decoration: none;
-  color: white;
+  color: ${fontsColor};
 `

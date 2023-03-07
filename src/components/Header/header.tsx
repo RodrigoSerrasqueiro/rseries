@@ -1,11 +1,10 @@
 import SearchBar from "../SearchBar/searchBar";
-import { HeaderContainer} from "./style";
-import { NavLink } from "react-router-dom";
+import { HeaderContainer, Logo} from "./style";
 
 function Header() {
   return (
     <HeaderContainer>
-      <NavLink className="logo" to="/rseries">RSéries</NavLink>
+      <Logo to="/rseries">RSéries</Logo>
       <SearchBar />
     </HeaderContainer>
   )

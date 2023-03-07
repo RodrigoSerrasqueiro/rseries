@@ -1,7 +1,8 @@
 import Header from './components/Header/header';
 import 'C:/Users/Rodrigo/Desktop/Projects/reactJS/rseriesType/src/App.css'
+import './GlobalStyle'
 import MaisVotadas from './pages/maisvotadas/maisvotadas';
-import {BrowserRouter, Route, Routes, NavLink} from 'react-router-dom'
+import {BrowserRouter, Route, Routes } from 'react-router-dom'
 import Sobre from './pages/sobre/sobre';
 import Busca from './pages/busca/busca';
 import Populares from './pages/populares/populares';
@@ -9,23 +10,24 @@ import { SearchProvider } from './pages/context/context';
 import Lancamentos from './pages/lancamentos/lancamentos';
 import Detalhes from './pages/detalhes/detalhes';
 import { GlobalProvider } from './pages/context/apicontext';
+import { Container, LinkPages, LinksContainer } from './App.style';
 
 function App() {
   return (
     <GlobalProvider>
       <SearchProvider>
-        <div className='App'>
-          <div className='navigation-links'>
+        <Container>
+          
             <BrowserRouter>
 
               <Header />
-              <div className="links-container">
-                <NavLink className='link-pages' to='/maisvotadas'>Mais votadas</NavLink>
-                <NavLink className='link-pages' to='/populares'>Populares</NavLink>
-                <NavLink className='link-pages' to='/lancamentos'>Lançamentos</NavLink>
-                <NavLink className='link-pages' to='/busca'>Busca</NavLink>
-                <NavLink className='link-pages' to='/sobre'>Sobre</NavLink>
-              </div>
+              <LinksContainer>
+                <LinkPages to='/maisvotadas'>Mais votadas</LinkPages>
+                <LinkPages to='/populares'>Populares</LinkPages>
+                <LinkPages to='/lancamentos'>Lançamentos</LinkPages>
+                <LinkPages to='/busca'>Busca</LinkPages>
+                <LinkPages to='/sobre'>Sobre</LinkPages>
+              </LinksContainer>
 
               <Routes>
                 <Route path='/rseries' element={<MaisVotadas />}></Route>
@@ -38,8 +40,8 @@ function App() {
               </Routes>
 
             </BrowserRouter>
-          </div>
-        </div>  
+
+        </Container>  
       </SearchProvider>
     </GlobalProvider>
   );

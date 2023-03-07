@@ -1,6 +1,5 @@
 import {useState, useContext} from "react";
-import { NavLink } from "react-router-dom";
-import { CardSerie, MaterialIcons, PosterImage, CardDetail, H1, H2, FavoriteIcon, StarIcon, Nota} from "./style";
+import { CardSerie, MaterialIcons, PosterImage, CardDetail, H1, H2, FavoriteIcon, StarIcon, Nota, DetailsLink} from "./style";
 import { GlobalContext } from "../../pages/context/apicontext";
 
 interface Props {
@@ -20,7 +19,6 @@ function Card(props: Props ) {
   const imgUrl ='https://image.tmdb.org/t/p/w200/'
   return (
     <CardSerie>
-
       <PosterImage style={{backgroundImage: `url(${imgUrl}${props.poster})`}}>
         <FavoriteIcon className="material-symbols-outlined" onClick={() => setFavoritecolor(!favoritecolor)} active={favoritecolor}>favorite</FavoriteIcon>
       </PosterImage>
@@ -34,10 +32,10 @@ function Card(props: Props ) {
         <H2>{props.lancamento}</H2>
       </CardDetail>
 
-      <NavLink to="/detalhes" className="details-link" onClick={() => setChave(props.chave)}>
+      <DetailsLink to="/detalhes" onClick={() => setChave(props.chave)}>
         <MaterialIcons className="material-icons">play_circle_filled</MaterialIcons>
         Detalhes
-      </NavLink>
+      </DetailsLink>
       
     </CardSerie>
   )
