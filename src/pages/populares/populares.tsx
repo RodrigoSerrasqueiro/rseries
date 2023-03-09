@@ -25,19 +25,24 @@ interface Serie {
 function Populares() {
 
   const [series, setSeries] = useState<Serie[]>([]);
-  const apiUrl = `https://api.themoviedb.org/3/tv/popular?api_key=05bf1a24dee1036c89b30cfb15b0997f&language=pt-BR&page=1`
+  const apiUrl = `https://api.themoviedb.org/3/tv/popular?api_key=05bf1a24dee1036c89b30cfb15b0997f&language=pt-BR&page=2`
 
   useEffect(() => {
-    async function load() {
-      try {
-        const resposta = await axios.get(apiUrl);
-        setSeries(resposta.data.results)
-      } catch (erro) {
-        console.log(erro);
-      }
+    load()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []) 
+
+  
+  async function load() {
+    try {
+      const resposta = await axios.get(apiUrl);
+      setSeries(resposta.data.results)
+    } 
+    catch (erro) {
+      console.log(erro);
     }
-    load();
-  }, [apiUrl]);
+  }
+
 
   return (
     <PopularContainer>
