@@ -55,12 +55,18 @@ export const Paragrafo2 = styled.p`
   color: ${fontsColor};
   font-size: 14px;
   text-align: left;
-  
-
-  @media(max-width: 1080px){
-    height: 100px;
+`
+export const ParagrafoContainer = styled.div`
+   height: 100px;
     overflow-y: scroll;
     text-align: justify;
     padding: 0 5px;
-  }
+    ::-webkit-scrollbar{
+      width: 1px;
+    }
+    ::-webkit-scrollbar-thumb{
+      background-color: #f2f2f2;
+      opacity: .1;
+      border-radius: 10px;
+    }
 `

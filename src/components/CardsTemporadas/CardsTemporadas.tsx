@@ -1,4 +1,4 @@
-import { CardTemporadaContainer, Episodio, InfoTemporada, Paragrafo1, Paragrafo2, PosterTemporada } from "./style";
+import { CardTemporadaContainer, Episodio, InfoTemporada, Paragrafo1, Paragrafo2, PosterTemporada, ParagrafoContainer } from "./style";
 
 
 function CardTemporada ({temporada}: any) {
@@ -13,9 +13,13 @@ function CardTemporada ({temporada}: any) {
 
         <Paragrafo1>{`${temporada.episode_count} Episódios`}</Paragrafo1>
 
+      <ParagrafoContainer>
+
         <Paragrafo2>
           {temporada.overview}
         </Paragrafo2>
+
+      </ParagrafoContainer>
 
       </InfoTemporada>
 
