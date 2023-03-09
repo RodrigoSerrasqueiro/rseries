@@ -1,5 +1,6 @@
 import Header from './components/Header/header';
-import 'C:/Users/Rodrigo/Desktop/Projects/reactJS/rseriesType/src/App.css'
+import './App.css'
+import './App.style'
 import './GlobalStyle'
 import MaisVotadas from './pages/maisvotadas/maisvotadas';
 import {BrowserRouter, Route, Routes } from 'react-router-dom'
