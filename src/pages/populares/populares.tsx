@@ -25,7 +25,7 @@ interface Serie {
 function Populares() {
 
   const [series, setSeries] = useState<Serie[]>([]);
-  const apiUrl = `https://api.themoviedb.org/3/tv/popular?api_key=05bf1a24dee1036c89b30cfb15b0997f&language=pt-BR&page=1`
+  const apiUrl = `https://api.themoviedb.org/3/tv/popular?api_key=05bf1a24dee1036c89b30cfb15b0997f&language=pt-BR&page=2`
 
   useEffect(() => {
     load()
