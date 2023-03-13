@@ -25,12 +25,11 @@ interface Serie {
 function Populares() {
 
   const [series, setSeries] = useState<Serie[]>([]);
-  const apiUrl = `https://api.themoviedb.org/3/tv/popular?api_key=05bf1a24dee1036c89b30cfb15b0997f&language=pt-BR&page=2`
+  const apiUrl = `https://api.themoviedb.org/3/tv/on_the_air?api_key=05bf1a24dee1036c89b30cfb15b0997f&language=pt-BR`
 
   useEffect(() => {
     load()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []) 
+  }) 
 
   
   async function load() {
